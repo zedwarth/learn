@@ -41,3 +41,10 @@ coming soon
 
 ###Mac (using brew)
 coming soon
+
+#### Docker Postgres
+If you prefer to use a docker container instead of installing postgres manually.
+
+`docker run -e POSTGRES_USER=$USER -p 5432:5432 -d postgres`
+
+This will download and run the official postgres docker container as a daemon, setup a postgres role(user) equal to your username, and make postgres accessible from localhost:5432.  All of these things are what rails is expecting.
